@@ -70,7 +70,7 @@ export default function Weather(props) {
           city={weatherData.city}
         />
         <footer>
-          This project was coded by Naomi Greco and is open-sourced on GitHub
+          This project was coded by Naomi Greco and is open-sourced on <a href="https://github.com/Nay-nay93/weather-react-nay" target="blank"> GitHub</a> 
           and hosted on Netlify
         </footer>
       </div>
