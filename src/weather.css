@@ -19,7 +19,7 @@
 }
 
 .Weather .search-input {
-  background: #badec2;
+  background: #deece1;
   border: none;
   padding: 15px 20px;
   display: inline-block;
@@ -31,7 +31,7 @@
 }
 
 .Weather .btn {
-  background: rgb(45, 84, 45);
+  background: rgb(94, 127, 94);
   font-weight: bold;
   font-size: 16px;
   padding: 15px 0;
@@ -82,6 +82,7 @@
   font-weight: bold;
   font-size: 80px;
   line-height: 1;
+  margin-top: 30px
 }
 
 .Weather canvas {
