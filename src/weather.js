@@ -40,11 +40,6 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <a
-          href="https://www.shecodes.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9 ">
@@ -70,8 +65,9 @@ export default function Weather(props) {
           city={weatherData.city}
         />
         <footer>
-          This project was coded by Naomi Greco and is open-sourced on <a href="https://github.com/Nay-nay93/weather-react-nay" target="blank"> GitHub</a> 
-          and hosted on Netlify
+          This project was coded by Naomi Greco and is open-sourced on <a href="https://github.com/Nay-nay93/weather-react-nay" target="blank"> GitHub </a> 
+          and hosted on <a href="https://reactprojectnay.netlify.app/"> Netlify</a>
+          
         </footer>
       </div>
     );
@@ -80,32 +76,4 @@ export default function Weather(props) {
     return "Loading...";
   }
 
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Type a City" onChange={updateCity} />
-        <input type="submit" value="Submit" />
-      </form>
-
-      {weather && (
-        <ul>
-          <li>
-            <strong>Temperature:</strong> {weather.temperature}°C
-          </li>
-          <li>
-            <strong>Description:</strong> {weather.description}
-          </li>
-          <li>
-            <strong>Humidity:</strong> {weather.humidity}%
-          </li>
-          <li>
-            <strong>Wind Speed:</strong> {weather.wind} m/s
-          </li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
-      )}
-    </div>
-  );
 }
