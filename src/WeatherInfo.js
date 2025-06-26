@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
@@ -23,7 +23,7 @@ export default function WeatherInfo(props) {
           <div className="temperature-container d-flex justify-content-end align-items-start gap-3">
             <WeatherIcon code={props.data.icon} size={52} />
             <div className="temperature">
-              <WeatherTemperature celsius={props.data.temperature} />
+              <WeatherTemperature celsius={props.data.temperature} unit={props.unit} setUnit={props.setUnit}/>
             </div>
           </div>
         </div>

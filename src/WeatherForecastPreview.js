@@ -9,16 +9,19 @@ export default function WeatherForecastPreview(props) {
     return days[day];
   }
 
-  function maxTemperature() {
-    let temperature = Math.round(props.data.temperature.maximum);
+  function convertTemperature(celsius) {
+    if (props.unit === "fahrenheit") {
+      return Math.round((celsius * 9) / 5 + 32);
+    }
+    return Math.round(celsius);
+  }
 
-    return `${temperature}°`;
+  function maxTemperature() {
+    return `${convertTemperature(props.data.temperature.maximum)}°`;
   }
 
   function minTemperature() {
-    let temperature = Math.round(props.data.temperature.minimum);
-
-    return `${temperature}°`;
+    return `${convertTemperature(props.data.temperature.minimum)}°`;
   }
 
   return (

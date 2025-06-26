@@ -59,14 +59,14 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData} />
+        <WeatherInfo data={weatherData} unit={props.unit} setUnit={props.setUnit} />
         <WeatherForecast
           coordinates={weatherData.coordinates}
-          city={weatherData.city}
+          city={weatherData.city} unit={props.unit}
         />
         <footer>
-          This project was coded by Naomi Greco and is open-sourced on <a href="https://github.com/Nay-nay93/weather-react-nay" target="blank"> GitHub </a> 
-          and hosted on <a href="https://reactprojectnay.netlify.app/"> Netlify</a>
+          This project was coded by Naomi Greco and is open-sourced on <a href="https://github.com/Nay-nay93/weather-react-nay" target="_blank"> GitHub </a> 
+          and hosted on <a href="https://reactprojectnay.netlify.app/" target="_blank"> Netlify</a>
           
         </footer>
       </div>
